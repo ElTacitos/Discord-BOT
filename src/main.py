@@ -6,6 +6,7 @@ import os
 from dotenv import load_dotenv
 
 from src.admin import Admin
+from src.fun import Fun
 from src.warmup import Warmup
 
 load_dotenv()
@@ -28,6 +29,7 @@ bot.author_id = 315509578924032010  # Change to your discord id
 async def on_ready():  # When the bot is ready
     await bot.add_cog(Warmup(bot))
     await bot.add_cog(Admin(bot))
+    await bot.add_cog(Fun(bot))
     print("I'm in")
     print(bot.user)  # Prints the bot's username and identifier
 
